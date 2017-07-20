@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Programming - Java</title>
+    <meta name="description" content="Programming Tutorial Website">
+    <meta name="author" content="Chris Munley and Aiden Trainer">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <script src="menu.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo"><img src="img/logo.png" alt="Logo"></div>
+        <div id="author">by Chris Munley & Aiden Trainer</div>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="cpp.html" class="selected">C++</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <div class="section">Intro</div>
+            <ul>
+                <li class="mi selected" onclick="window.location='#intro'">What is C++</li>
+                <li class="mi" onclick="window.location='#starting'">Getting Started</li>
+            </ul>
+            <div class="section">Basics</div>
+            <ul>
+                <li class="mi selected" onclick="window.location='#helloworld'">Hello World</li>
+                <li class="mi" onclick="window.location='#comments'">Comments</li>
+                
+
+                <li class="mi" onclick="window.location='#review1'">Review 1</li>
+            </ul>
+            <div class="section">Fundamentals</div>
+            <ul>
+                <li class="mi" onclick="window.location='#syntax'">Syntax</li>
+                <li class="mi" onclick="window.location='#variables'">Variables</li>
+                <li class="mi" onclick="window.location='#naming'">Naming</li>
+                <li class="mi" onclick="window.location='#boolean'">boolean</li>
+                <li class="mi" onclick="window.location='#keywords'">Keywords</li>
+                <li class="mi" onclick="window.location='#review2'">Review 2</li>
+            </ul>
+        </div>
+        
+
+        <div id="page">
+            
+
+            <div id="intro">
+                <h1>What is C++</h1>
+                <p>C++ is a general-purpose, object-oriented programming language developed by James Gosling in the mid 1990s while he was working at Sun Microsystems. One main feature of java that sets it apart from others is that it is machine-independent, meaning that a Java program can be written and run on any platform (Windows, Mac, Linux, etc). Java is capable of running on any platform because a compiler is used to run it.</p>
+                <p>The compiler takes java code and converts it into a code known as bytecode. The compiler also checks for syntax errors. If there are no errors, the compiler generates a new program based on your java code that is readable by a Java virtual machine (JVM). The JVM is where the Java program actually runs, since it translates the bytecode into machine code. JVM is part of the Java Runtime Environment(JRE). <div class="block yellow">It is not extremely important to understand compilers, bytecode, the JVM, or the JRE right now, but it is always good to know what you are actually working with.</div>Now that you know what Java is, let's jump right into it!</p>
+            </div>
+
+
+
+            <div id="starting">
+                <h1>Getting started</h1>
+                <p>What do I need to start making my own Java programs? Well, you need somewhere to write, compile, and run code. For this, you have a few options. The best place to program in Java is in an IDE. An IDE, or Integrated Development Environment, is a simple piece of software that aids you in writing code.<div class="block blue">A few great IDE's include Eclipse, IntelliJ, NetBeans. You cant go wrong with any of these.</div> An alternative to downloading an IDE is to go to <a href="repl.it/languages/java">repl.it/languages/java</a>, which basically serves as an online IDE where you can write, compile and run code. This option does not have as many features to aid you in writing code, but it will run code just the same. Once you have an IDE or a similar alternative, you are ready to learn Java!</p>
+            </div>
+
+
+            <div class="separator"></div>
+            <br>
+
+
+            <!-- <div id="oop">
+                <h1>OOP (Object-Oriented Programming)</h1>
+                <p>Object-oriented programming is a type of programming that uses the concept of classes and objects. It is a well known approach since we live in a world that is object oriented. Everywhere you look, there are objects, and each object has attributes that make them different from other objects. Classes define how an object will be constructed, then objects are actually created from these classes, which you manipulate in your program.</p>
+                <div class="block blue">It is a good practice to relate new Java concepts to things in your daily life, as it helps you really understand what is going on.</div>
+            </div> -->
+
+            <div id="helloworld">
+                <h1>Hello World</h1>
+                <p>A hello world program is traditionally the first computer program that a beginning Java programmer writes.</p>
+                <div class="block code">
+                    <pre style="color:#000020;"><span style="color:#200080; font-weight:bold; ">public</span> <span style="color:#200080; font-weight:bold; ">class</span> HelloWorld <span style="color:#406080; ">{</span><br>    <span style="color:#200080; font-weight:bold; ">public</span> <span style="color:#200080; font-weight:bold; ">static</span> <span style="color:#7779bb; ">void</span> main<span style="color:#308080;">(</span><span style="color:#6679aa; font-weight:bold; ">String</span><span style="color:#308080; ">[</span><span style="color:#308080; ">]</span> args<span style="color:#308080; ">)</span> <span style="color:#406080; ">{</span><br>        <span style="color:#6679aa; font-weight:bold; ">System</span><span style="color:#308080; ">.</span>out<span style="color:#308080; ">.</span>println<span style="color:#308080; ">(</span><span style="color:#1060b6; ">"Hello World!"</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span><br>    <span style="color:#406080;">}</span><br><span style="color:#406080;">}</span></pre>
+                </div>
+                <p>To begin writing a Java program, you must first make a class. This is done with "public class HelloWorld { }". In order to run a Java program, there must be a main method. "public static void main(String[] args) { }" is how you create a main method. Don't worry too much about what each term means now, we will go over that in depth later.</p>
+                <div class="block blue"><p>To print something to the console in a Java program, you must use either "System.out.println()" or "System.out.print()". The only difference between the two is that the latter does not create a new line after printing whatever is inside the parentheses.</p></div>
+            </div>
+
+            <div id="comments">
+                <h1>Comments</h1>
+                <p>Commenting your code is an essential part of being a good programmer. If you want to come back to your work later in time, you will be glad you used comments, as it will make your code so much easier to understand. Also, if you ever collaborate with people in the future, you are going to want them to be able to understand your code. You can guide their thinking with comments. However, you shouldn't overcomment your code, as it can distract from the code and make harder. Only put comments where necessary and where it won't distract anyone. <div class="block green">Comments are ignored by the compiler; they are solely for the programmer.</div>Inline comments in Java are created with "//". Inline means that only the line that // is on will be commented out. Also, only things that come after // will be ignored by the compiler, and stuff that comes before it on the same line will be read as regular code.<br>The syntax for multi line comments in Java is "/* comments go here, across multiple lines */". You can start and close a comment section with /* and */. Anything in between these will be ignored. These type of comments can span across many lines. 
+                <div class="block code">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>// this is a single line comment</span><br><br>int i = 5; <span style='color:#3f7f59; '>// this is a comment after some code</span><br><br><span style='color:#3f7f59; '>/* </span><br><span style='color:#3f7f59; '>&#xa0;&#xa0;&#xa0;&#xa0;This is a multi line comment</span><span style='color:#3f7f59; '><br>&#xa0;&#xa0;&#xa0;&#xa0;int i =5; this code is ignored, will not affect the program</span><br><span style='color:#3f7f59; '>*/</span></pre>
+                </div>
+                <div class="block yellow">In many IDEs, if you highlight some text and hit "ctrl+/", all of the text will be commented out for you so you don't have to do it by hand. This is useful if you want to see how the code runs when you take out some code, but you don't wan't to remove the code for good.</div> </p>
+            </div>
+
+            <div id="variables">
+                <h1>Variables</h1>
+                <p>
+                    Variables store data that can be used later. Each variable is given a name, or an identifier, that explains what the variable holds. Each variable has a type: <ul><li>int: stores whole numbers only ex. 12, 156, 8722</li><li>double: stores floating point numbers (decimals) and whole numbers ex. 3.1415, -2.0, 3.5</li><li>String: stores text such as "Hello World!". Text string are enclosed in double quotes.</li><li>boolean: stores true or false values only</li><li>char: char stands for character, and it holds only one character. chars are surrounded in single quotes.</li></ul>
+                    <div class="block code"><pre style='color:#000000;background:#ffffff;'>String name = "chris";<br><br>int grade = 12;<br><br>double gpa = 4.6;<br><br>boolean goodAtJava = true;<br><br>char grade = 'A';</pre></div>
+                    <div class="block green">You can declare multiple variables of the same type on the same line: "int a = 5, b = 7, c = 9;" is competely valid.</div>
+                    There are two general types of variable in Java: primitive and non-primitive. The main difference between these are the way data is stored. In a primitive variable, the data is stored directly in the variable, as you would imagine. With a non-primitive variable, the variable actually doesn't hold the data itself, but rather a reference to an object (they reference a specific memory location). Non-primitive data types are not defined by the programming language, but rather by the programmer, usually through classes. A non-primitive data type is usually just called an Object. Java has eight primitive data types: byte, short, int, long, char, boolean, double, and float.
+                    <div class="block green">If a data type starts with a lower case letter (such as int, boolean, etc.), it is a primitive data type. Non-primitive type variables start with a captial letter (such as String).</div>
+                </p>
+            </div>
+
+
+            <div id="review1">
+                <h1>Review 1</h1>
+                <ul>
+                    <li>Java can run on any platform</li>
+                    <li>Java is a general-purpose, object-oriented computer programming language</li>
+                    <li>Java has thousands of built in classes that anyone can use</li>
+                    <li>An integrated development environment is a piece of software that allows you to write programs more easily</li>
+                    <li>HelloWorld is traditionally the first computer program that someone starting to learn Java writes</li>
+                    <li>"System.out.println()" prints whatever is inside () to the console, followed by a new line</li>
+                </ul>
+            </div>
+            <div class="separator"></div>
+            <br>
+
+
+            <br>
+            <div id="syntax">
+                <h1>Syntax</h1>
+                <p>The syntax of a programming language defines the correct way to type code so that the compiler can read it. Syntax can be thought of as the structure of the program and the sort of dictionary of the language.</p>
+                <p>A syntax error is when you mess up how the code is supposed to be written, like forgetting a semicolon after an instruction. Your program will not run until all syntax errors are fixed.</p>
+                <div class="block red"><p>If you have any syntax errors, the compiler will respond with a compile-time error and you will not be able to run your program until the errors are fixed.</p></div>
+            </div>
+            <br>
+            <div id="variables">
+                <h1>Primitive variables</h1>
+                <p>Data, such as numbers, characters, sentences, and more can be stored and retrieved while a program is running. Data such as integers and decimal numbers are stored in the computer by declaring a variable. When you declare a variable, the computer makes space for it inside the working memory of the computer while the program is running (RAM). Once the space is made, the programmer can give the variable a value, change the value, or retrieve the value at any time.</p>
+                <p>In Java, the programmer must decide ahead of time what type of data they want to store in the variable. The type of data is known as a data type. The two most important primitive data types that store numbers are the int and the double.</p>
+                <div class="block blue"><p>The int data type can only hold whole numbers, while double (and others such as float) can hold both whole numbers and decimal numbers.</p></div>
+                <div class="block code">
+                    <pre style="color:#000020;"><span style="color:#6679aa; font-weight:bold; ">int</span> myNumber = 47; <span style="color:#595979; ">//remember: decimal values can not be stored in an int</span><br><br><span style="color:#6679aa; font-weight:bold; ">double</span> pi = 3.14;<br><br><span style="color:#6679aa; font-weight:bold; ">int</span> age = 35;<br><br><span style="color:#6679aa; font-weight:bold; ">double</span> price = 9.99;</pre>
+                </div>
+                <div class="block blue">When you first create a variable, this is known as declaring a variable, and when you first assign it a value, it is known as initializing it.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Programming - Home</title>
+    <meta name="description" content="Programming Tutorial Website">
+    <meta name="author" content="Chris Munley and Aiden Trainer">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <script src="menu.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo"><img src="img/logo.png" alt="Logo"></div>
+        <div id="author">by Chris Munley & Aiden Trainer</div>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="selected">Home</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="cpp.html">C++</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <div class="section">Introduction</div>
+            <ul>
+                <li class="mi selected" onclick="window.location='#welcome'">Welcome</li>
+                <li class="mi" onclick="window.location='#aboutme'">About me</li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="welcome">
+                <h1>Welcome</h1>
+                <p>Welcome to our site about programming. Our goal is for you to be able to go out into the real world and make real applications by the time you have gone through our page. Read through our tutorials, practice replicating code examples, try our practice problems, or simply skim the pages. You are sure to learn something! Enjoy!
+                <div class="block blue">Main points, important concepts, and more will appear in blue boxes</div>
+                <div class="block green">Useful tips will appear in a green box</div>
+                <p>Code example:</p>
+                <div class="block code">
+                    <pre style="color:#000020;"><span style="color:#200080; font-weight:bold; ">public</span> <span style="color:#200080; font-weight:bold; ">class</span> HelloWorld <span style="color:#406080; ">{</span><br>    <span style="color:#200080; font-weight:bold; ">public</span> <span style="color:#200080; font-weight:bold; ">static</span> <span style="color:#7779bb; ">void</span> main<span style="color:#308080;">(</span><span style="color:#6679aa; font-weight:bold; ">String</span><span style="color:#308080; ">[</span><span style="color:#308080; ">]</span> args<span style="color:#308080; ">)</span> <span style="color:#406080; ">{</span><br>        <span style="color:#6679aa; font-weight:bold; ">System</span><span style="color:#308080; ">.</span>out<span style="color:#308080; ">.</span>println<span style="color:#308080; ">(</span><span style="color:#1060b6; ">"Hello World!"</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span><br>    <span style="color:#406080;">}</span><br><span style="color:#406080;">}</span></pre>
+                </div>
+                <div class="block yellow">The yellow box... is a wildcard. Watch out!</div>
+                <div class="block red">Warning! Watch out for red boxes, as they will steer you away from making simple mistakes.</div>
+            </div>
+            <div class="separator"></div>
+            <div id="aboutme">
+                <h1>About me</h1>
+                <p>Hello! I am Chris Munley. Aiden Trainer and I started this site to teach our peers about programming languages that they will confront in their school life and possible in the workforce. There is a seperate page for each language. As a side note, this site is still under construction, so please check back soon for more information and learning.</p>
+
+                <p>Aenean dictum lacus quis facilisis volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce felis velit, pretium nec odio eget, efficitur ullamcorper nisi. Etiam at mattis risus. Curabitur ut venenatis tellus. Donec ut vulputate leo. Cras vitae aliquam leo, finibus accumsan neque. Maecenas vestibulum facilisis nunc suscipit pellentesque.</p>
+
+                <p>Maecenas venenatis, mi quis sollicitudin dictum, dolor neque laoreet dui, in sollicitudin eros magna vitae lectus. Phasellus risus ipsum, commodo sit amet commodo a, tristique eget lectus. Fusce mollis, nulla ac fringilla ornare, tortor lacus dictum elit, sed laoreet turpis turpis eu magna. Duis tincidunt quam at aliquam tempus. Donec ante enim, fringilla id diam quis, convallis pellentesque justo. Curabitur tempus quam ultrices lacus dignissim, ut blandit ante ornare. Maecenas nunc neque, efficitur in hendrerit sit amet, blandit sed dolor. Proin interdum vestibulum diam, sed eleifend neque congue cursus. Pellentesque quis euismod purus. Ut vitae elementum quam. Nullam a purus viverra, sagittis urna dictum, facilisis ipsum.</p>
+
+                <p>Sed imperdiet ipsum dolor, et semper lorem pulvinar hendrerit. Suspendisse tincidunt eget enim sit amet consequat. Maecenas pellentesque diam in vulputate placerat. Praesent ligula erat, aliquet eget dolor et, elementum semper est. Duis egestas sollicitudin mauris, vitae vestibulum dui pulvinar nec. Aliquam quis dui ullamcorper, molestie felis id, auctor urna. Phasellus ut tincidunt ex, quis laoreet massa. Pellentesque venenatis accumsan dapibus. Aliquam vitae dignissim libero, scelerisque scelerisque purus. Mauris purus erat, viverra ut risus nec, tristique mattis sapien. Sed vitae quam quis sapien egestas mattis nec id libero. Sed vehicula volutpat enim vitae tristique. Cras congue ac dolor vel pharetra. Nullam turpis lacus, aliquet vel volutpat non, commodo at ante.</p>
+
+                <p>Etiam hendrerit erat vitae sodales aliquet. Nulla facilisi. Mauris non ipsum euismod, placerat arcu eu, egestas lacus. Aenean ultricies eu ante non volutpat. Nunc dictum ligula non cursus tempor. Ut eleifend enim quis neque interdum, a ultrices neque condimentum. Integer consequat massa eu arcu semper, tincidunt laoreet nunc porta. Donec non tincidunt nisl. Morbi pellentesque maximus sem, sit amet maximus ex ullamcorper a. Fusce venenatis nisl nec arcu elementum aliquet. Donec non volutpat odio. Suspendisse et placerat erat. Cras nec aliquet nulla. Curabitur vel imperdiet sapien.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
