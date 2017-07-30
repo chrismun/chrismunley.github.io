@@ -6,7 +6,7 @@
 
     <title>Programming - Java</title>
     <meta name="description" content="Programming Tutorial Website">
-    <meta name="author" content="Chris Munley">
+    <meta name="author" content="Chris Munley and Aiden Trainer">
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
     <div id="header">
         <div id="logo"><img src="img/logo.png" alt="Logo"></div>
-        <div id="author">by Chris Munley</div>
+        <div id="author">by Chris Munley & Aiden Trainer</div>
         <div id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -36,11 +36,11 @@
             <ul>
                 <li class="mi selected" onclick="window.location='#helloworld'">Hello World</li>
                 <li class="mi" onclick="window.location='#comments'">Comments</li>
-                
-
+                <li class="mi" onclick="window.location='#variables'">Variables</li>
+                <li class="mi" onclick="window.location='#operators'">Operators</li>
                 <li class="mi" onclick="window.location='#review1'">Review 1</li>
             </ul>
-            <div class="section">Fundamentals</div>
+            <div class="section">Conditionals</div>
             <ul>
                 <li class="mi" onclick="window.location='#syntax'">Syntax</li>
                 <li class="mi" onclick="window.location='#variables'">Variables</li>
@@ -91,9 +91,9 @@
 
             <div id="comments">
                 <h1>Comments</h1>
-                <p>Commenting your code is an essential part of being a good programmer. If you want to come back to your work later in time, you will be glad you used comments, as it will make your code so much easier to understand. Also, if you ever collaborate with people in the future, you are going to want them to be able to understand your code. You can guide their thinking with comments. However, you shouldn't overcomment your code, as it can distract from the code and make harder. Only put comments where necessary and where it won't distract anyone. <div class="block green">Comments are ignored by the compiler; they are solely for the programmer.</div>Inline comments in Java are created with "//". Inline means that only the line that // is on will be commented out. Also, only things that come after // will be ignored by the compiler, and stuff that comes before it on the same line will be read as regular code.<br>The syntax for multi line comments in Java is "/* comments go here, across multiple lines */". You can start and close a comment section with /* and */. Anything in between these will be ignored. These type of comments can span across many lines. 
+                <p>Before we get into specific details about java, we should talk about a good programming practice: commenting. Commenting your code is an essential part of being a good programmer. If you want to come back to your work later in time, you will be glad you used comments, as it will make your code so much easier to understand. If you ever collaborate with people in the future, you are going to want them to be able to understand your code. You can guide their thinking with comments. However, you shouldn't overcomment your code, as it can distract from the code and make harder. Only put comments where necessary and where it won't distract anyone. <div class="block green">Comments are ignored by the compiler; they are solely for the programmer.</div>Inline comments in Java are created with "//". Inline means that only the line that // is on will be commented out. Also, only things that come after // will be ignored by the compiler, and stuff that comes before it on the same line will be read as regular code.<br>The syntax for multi line comments in Java is "/* comments go here, across multiple lines */". You can start and close a comment section with /* and */. Anything in between these will be ignored. These type of comments can span across many lines. 
                 <div class="block code">
-                <pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>// this is a single line comment</span><br><br>int i = 5; <span style='color:#3f7f59; '>// this is a comment after some code</span><br><br><span style='color:#3f7f59; '>/* </span><br><span style='color:#3f7f59; '>&#xa0;&#xa0;&#xa0;&#xa0;This is a multi line comment</span><span style='color:#3f7f59; '><br>&#xa0;&#xa0;&#xa0;&#xa0;int i =5; this code is ignored, will not affect the program</span><br><span style='color:#3f7f59; '>*/</span></pre>
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>// this is a single line comment</span><br><br>int i = 5; <span style='color:#3f7f59; '>// this is a comment after some code</span><br><br><span style='color:#3f7f59; '>/* </span><br><span style='color:#3f7f59; '>&#xa0;&#xa0;&#xa0;&#xa0;This is a multi line comment</span><span style='color:#3f7f59; '><br>&#xa0;&#xa0;&#xa0;&#xa0;int i = 0; this code is ignored, will not affect the program</span><br><span style='color:#3f7f59; '>*/</span></pre>
                 </div>
                 <div class="block yellow">In many IDEs, if you highlight some text and hit "ctrl+/", all of the text will be commented out for you so you don't have to do it by hand. This is useful if you want to see how the code runs when you take out some code, but you don't wan't to remove the code for good.</div> </p>
             </div>
@@ -106,6 +106,27 @@
                     <div class="block green">You can declare multiple variables of the same type on the same line: "int a = 5, b = 7, c = 9;" is competely valid.</div>
                     There are two general types of variable in Java: primitive and non-primitive. The main difference between these are the way data is stored. In a primitive variable, the data is stored directly in the variable, as you would imagine. With a non-primitive variable, the variable actually doesn't hold the data itself, but rather a reference to an object (they reference a specific memory location). Non-primitive data types are not defined by the programming language, but rather by the programmer, usually through classes. A non-primitive data type is usually just called an Object. Java has eight primitive data types: byte, short, int, long, char, boolean, double, and float.
                     <div class="block green">If a data type starts with a lower case letter (such as int, boolean, etc.), it is a primitive data type. Non-primitive type variables start with a captial letter (such as String).</div>
+                </p>
+            </div>
+
+            <div id="operators">
+                <h1>Operators</h1>
+                <p>
+                   Java provides many arithmetic operators: +, -, *, /, and % perform addition, subtraction, multiplication, division, and modulo operations respectively. When using these math operations in java you must be aware of what type of variables you are working with, and how the operator will be interpreted.
+                </p>
+                <h3>'+' for Addition and Concatenation</h3>
+                <p>The + operator has two functions: to add numeric quantities and to concatenate strings. When + is used on two numbers, they will be added together. However when you use + on String variables it concatenates them, or puts them together.
+                <div class="block blue">
+                A very important thing to note about the + operator is that if only one of the two operands (things being added together) is a String and the other is a number, the number will be converted to and treated as a String. It follows that "System.out.println("Health: " + playerHealth);" would work as you would expect, and you don't have to put quotes around the variable name or if it was an actual number, since it is converted to a string.<br><br>System.out.println("30 + 50 = " 30 + 50);    // this prints '30 + 50 = 3050'<br>If you wanted the + operator to work as a numerical operation, you could put () around 30 + 50 in the above print statement, since parentheses are treated with higher priority just as in a calculator or math class.
+                </div></p>
+                <h3>Subtraction and Multiplication</h3>
+                <p>The - operator actually serves two purposes as well; it can be used as a regular math operator to subtract two numbers, and it can also be used to make a number negative.<br><br>The * symbol is simply a multiplication operator, for example 10 * 10 = 100.</p>
+                <h3>Division with '/'</h3>
+                <p>
+                Division in Java is relatively straight forward. If you divide two integer numbers,the largerst whole number will be returned and any remainder will be forgotten. If one is a floating point, or decimal number, the result will be a decimal number. If you divide by zero in java, an exception will be thrown. The best way to learn what results you will get from dividing two numberic values is to go into your ide and test a bunch of situations out. You can only learn if you practice!
+                </p>
+                <h3>The modulus operator</h3>
+                <p>I think the modulus operator scares a lot of new programmers because they have probably never seen it in a calculator or math class before. Thhe modulus % simply returns the remainder of a division. For example, 7 % 3 returns 1, and 12 % 3 returns 0.<br><br>A common way to use the modulus operator is to check if a number is even or a multiple of something: for example, any number % 2 will return either 0 or 1. If 0, the number is divisible by 2 and is an even number, else it is an odd number.
                 </p>
             </div>
 
@@ -125,24 +146,6 @@
             <br>
 
 
-            <br>
-            <div id="syntax">
-                <h1>Syntax</h1>
-                <p>The syntax of a programming language defines the correct way to type code so that the compiler can read it. Syntax can be thought of as the structure of the program and the sort of dictionary of the language.</p>
-                <p>A syntax error is when you mess up how the code is supposed to be written, like forgetting a semicolon after an instruction. Your program will not run until all syntax errors are fixed.</p>
-                <div class="block red"><p>If you have any syntax errors, the compiler will respond with a compile-time error and you will not be able to run your program until the errors are fixed.</p></div>
-            </div>
-            <br>
-            <div id="variables">
-                <h1>Primitive variables</h1>
-                <p>Data, such as numbers, characters, sentences, and more can be stored and retrieved while a program is running. Data such as integers and decimal numbers are stored in the computer by declaring a variable. When you declare a variable, the computer makes space for it inside the working memory of the computer while the program is running (RAM). Once the space is made, the programmer can give the variable a value, change the value, or retrieve the value at any time.</p>
-                <p>In Java, the programmer must decide ahead of time what type of data they want to store in the variable. The type of data is known as a data type. The two most important primitive data types that store numbers are the int and the double.</p>
-                <div class="block blue"><p>The int data type can only hold whole numbers, while double (and others such as float) can hold both whole numbers and decimal numbers.</p></div>
-                <div class="block code">
-                    <pre style="color:#000020;"><span style="color:#6679aa; font-weight:bold; ">int</span> myNumber = 47; <span style="color:#595979; ">//remember: decimal values can not be stored in an int</span><br><br><span style="color:#6679aa; font-weight:bold; ">double</span> pi = 3.14;<br><br><span style="color:#6679aa; font-weight:bold; ">int</span> age = 35;<br><br><span style="color:#6679aa; font-weight:bold; ">double</span> price = 9.99;</pre>
-                </div>
-                <div class="block blue">When you first create a variable, this is known as declaring a variable, and when you first assign it a value, it is known as initializing it.</div>
-            </div>
         </div>
     </div>
 </body>
