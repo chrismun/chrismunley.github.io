@@ -49,6 +49,14 @@
                 <li class="mi" onclick="window.location='#keywords'">Keywords</li>
                 <li class="mi" onclick="window.location='#review2'">Review 2</li>
             </ul>
+            <div class="section">Decision-making</div>
+            <ul>
+                <li class="mi" onclick="window.location='#decisionbasics'">Basics</li>
+                <li class="mi" onclick="window.location='#if'">if</li>
+                <li class="mi" onclick="window.location='#else'">else and else if</li>
+                <li class="mi" onclick="window.location='#switch'">Switches</li>
+                <li class="mi" onclick="window.location='#review3'">Review 3</li>
+            </ul>
         </div>
         
 
@@ -144,8 +152,67 @@
             </div>
             <div class="separator"></div>
             <br>
+            
+            <div id="decisionbasics">
+                <h1>Decision-making basics</h1>
+                <p>In this section we will discuss conditional statements which are the simplest way to make your program actually do more than one thing. They will make it so that your program can do something different than normal if a condition is satisfied.</p>
+                <p>There are 2 types of conditional statements in Java, as in many other high-level programming languages. They are:</p>
+                <ul>
+                    <li>If statements</li>
+                    <li>Switches</li>
+                </ul>
+                <div class="block blue">
+                    If statement blocks can look for more than one condition at a time. This is done by the use of else and else if statments as well as nested ifs.
+                </div>
+            </div>
+            
+            <div id="if">
+                <h1>if</h1>
+                <p>The if statement is the most basic conditional statement. If the condition is true, it will run the code inside the block. If the condition is not true, the code inside the block will not run. Take a look at this example:</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>int x = 10;<br><br>if( x < 20 ) {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("20 is greater than 10, so this will get printed");<br>}<br><br>if( x < 5 ) {<br>&#xa0;&#xa0;&#xa0;&#xa0;<span style='color:#3f7f59; '>// any code here will NOT run because 5 is not greater than 10</span><br>}</pre>
+                </div>
+                <p>A lonely if statement would be used when you do not want to do anything special when a condition is not met.</p>
+            </div>
 
-
+            <div id="else">
+                <h1>else and else if</h1>
+                <p>If you do want to something different when the condition is false, you can use an else statement.</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>if( x == 17 ) {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("x was 17");<br>} else {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("in every other case this would be printed instead");<br>}</pre>
+                </div>
+                <p>In the event that you have more than one condition to check as well as an "else" fallback, you can use an else if block</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>if( x == 17 ) {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("x was 17");<br>} else if( x == 18 ){<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("x was 18");<br>} else {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("in every other case this would be printed instead");<br>}</pre>
+                </div>
+                <div class="block green">
+                    Both if and else if can evaluate two conditions at a time using the && operator. For instance if( x < 10 && x > 8 ) { ... } will be true for a number like 8.2 or 9 but not 7.6 or 10.
+                </div>
+            </div>
+            
+            <div id="switch">
+                <h1>Switches</h1>
+                <p>A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case.</p>
+                <div class="block red">
+                    A switch will continue looking even after it has found a match! You can use the optional break statements to stop this from happening.
+                </div>
+                <p>Switches in programming in general are a bit of a misnomer. You have to think of them a lot more like multi-track railway switches, rather than light switches, as there are usually a lot more cases than just 2.</p>
+                <p>Also, it is worth bearing in mind that switches can only be used when you know exactly what sort of values you expect; they are no good for evaluating if a value has a certain property. For instance, they will happily check if your string is "hello world", but will me useless for checking if your string has 11 characters.</p>
+                <p>The "default" case will be used if no other match was found.</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>switch(name) {<br>&#xa0;&#xa0;&#xa0;&#xa0;case "Chris" :<br>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("Awesome name Chris!");<br>&#xa0;&#xa0;&#xa0;&#xa0;case "Aidan" :<br>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("Nice one Aidan!");<br>&#xa0;&#xa0;&#xa0;&#xa0;default :<br>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;System.out.println("You have some other name.");<br>}</pre>
+                </div>
+            </div>
+            
+            <div id="review3">
+                <h1>Review 3</h1>
+                <ul>
+                    <li>Conditional statements are the easiest way to make your application do something based of varing input.</li>
+                    <li>Java has 2 types of conditional statements; if-elseif-else blocks and switches.</li>
+                    <li>If statements can be used to determine if a condition is true.</li>
+                    <li>Switches can be used to check if a value is the same as something else.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
