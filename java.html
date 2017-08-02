@@ -50,6 +50,15 @@
                 <li class="mi" onclick="window.location='#switch'">Switches</li>
                 <li class="mi" onclick="window.location='#review2'">Review 2</li>
             </ul>
+            
+            <div class="section">Iteration</div>
+            <ul>
+                <li class="mi" onclick="window.location='#iterationbasics'">Basics</li>
+                <li class="mi" onclick="window.location='#for'">for</li>
+                <li class="mi" onclick="window.location='#while'">while and do...while</li>
+                <li class="mi" onclick="window.location='#controlstatements'">Control Statements</li>
+                <li class="mi" onclick="window.location='#review3'">Review 3</li>
+            </ul>
         </div>
         
 
@@ -197,6 +206,96 @@
                     <li>Java has 2 types of conditional statements; if-elseif-else blocks and switches.</li>
                     <li>If statements can be used to determine if a condition is true.</li>
                     <li>Switches can be used to check if a value is the same as something else.</li>
+                </ul>
+            </div>
+            <div class="separator"></div>
+            <br>
+            <div id="iterationbasics">
+                <h1>Iteration basics</h1>
+                <p>Iteration in programming is the running a computer program for a defined number of repetitions. A block of statements is said to be iterated; you can also refer to that block of statements as one "iteration".</p>
+                <div class="block green">
+                    "Iteration" is just another word for looping.
+                </div>
+                <p>Iteration is particulary useful when you have code that you need to be run a large (or variable) number of times. It is also commonly used when working with arrays.</p>
+                <p>A good way to know that you should be using iteration is if you find yourself rewriting or copying and pasting a large amount of code in one place. This common rookie mistake often takes place when printing, manipulating strings and arrays as well as mathematical operations,</p>
+                <p>There are 2 common types of loops Java, and 1 that is rarely used. They are, roughly in order of use:</p>
+                <ul>
+                    <li>for loops</li>
+                    <li>while loops</li>
+                    <li>do...while loops</li>
+                </ul>
+                <p>Let's take a deeper look at each one and how and when to use them.</p>
+            </div>
+            
+            <div id="for">
+                <h1>for</h1>
+                <p>The for loop is typically used where we already know how many iterations we will require. In Java, like many other languages, the for loop consists of three parts in the head of the loop. They are, in the order the are used:</p>
+                <ul>
+                    <li>intialization</li>
+                    <li>condition</li>
+                    <li>incrementation</li>
+                </ul>
+                <p>Here are all the parts in their correct places in the loop:</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>for(intialization; condition; incrementation) {<br>&#xa0;&#xa0;&#xa0;&#xa0;<span style='color:#3f7f59; '>// do something</span><br>}</pre>
+                </div>
+                <p>Let's break that down in a worked example.</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>for(int i = 1; i < 10; i++) {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println( i );<br>}</pre>
+                </div>
+                <div class="block blue">
+                    i++ means the same thing as i = i + 1
+                </div>
+                <p>In the intialization step we create our iterator, the (in this case) number that we will use to determine how many time we have already exectured the code in the loop.</p>
+                <p>The condition part works a lot like a conditional statemtent that we discussed in section 2. The only difference is that the condition will be checked against every time you go round the loop. At the point where the condition is not resolved as true, no more code inside the loop will use run.</p>
+                <p>The incrementation will increment the iterator</p>
+                <div class="block green">
+                    You can also use decrimentation by using a negative increment like i-- which is the same as i = i - 1.
+                </div>
+                <p>In this example out iterator is the variable i, and we want to keep going round the loop as long as 10 is greater than i, adding 1 to i every time. Meanwhile, on every iteration we simply want to print out i. This example will result in the output of "123456789".</p>
+                <div class="block yellow">
+                    See if you can try to make a program that print out all odd numbers smaller than 40. Hint: you might need to use i = i + 2 somewhere in your incrementation.
+                </div>
+            </div>
+            
+            <div id="while">
+                <h1>while and do...while</h1>
+                <p>While loops are very well explain buy simply taking their name at face value. You will often find that programming concepts become quite easy to grasp if you say exactly what they do in english. "While a condition is true, run some code". It's that simple; while loops are almost like glorified if statements. Let's take a look at how they work in practice.</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>int i = 1;<br><br>while(i < 10) {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println( i );<br>&#xa0;&#xa0;&#xa0;&#xa0;i++;<br>}</pre>
+                </div>
+                <p>This example will output the exact same thing as the example in the for loop section; "123456789".</p>
+                <p>You will notice that in a while loop you are expected to do the intialization and incrementation on your own.</p>
+                <p>The main learning point on while loops is that the loop might never run. When the expression is tested and the result is false, the loop body will be skipped and the first statement after the while loop will be executed.</p>
+                <p>Let's investigate the use of do...while loops which in contrast are guaranteed to run at least once. All a do...while loop is is a a flipped while loop. Here is the same example:</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>int i = 1;<br><br>do {<br>&#xa0;&#xa0;&#xa0;&#xa0;System.out.println( i );<br>&#xa0;&#xa0;&#xa0;&#xa0;i++;<br>}while (i < 10);</pre>
+                </div>
+                <div class="block red">
+                    Be very careful when using do...while loops as they are very prone to <a href="https://en.wikipedia.org/wiki/Off-by-one_error">off-by-one errors</a>, if you are not familiar with their inverted nature.
+                </div>
+            </div>
+            
+            <div id="controlstatements">
+                <h1>Control Statements</h1>
+                <p>There are two control statements related to iteration in Java. They are:</p>
+                <ul>
+                    <li>break</li>
+                    <li>continue</li>
+                </ul>
+                <p>Break and continue will be familiar to many programmers. Break exits a for, while, or switch structure. Continue exits the current pass in the loop and begins with the next. Their correct usage is as follows:</p>
+                <div class="block code">
+                    <pre style='color:#000000;background:#ffffff;'>break;<br><br>continue;</pre>
+                </div>
+            </div>
+            
+            <div id="review3">
+                <h1>Review 3</h1>
+                <ul>
+                    <li>You can use interation to consisely perform repetative tasks.</li>
+                    <li>There are 3 types of loops: for, while and do...while.</li>
+                    <li>Pay attention to off-by-one errors.</li>
+                    <li>Control statements like break and continue can help you navigate a loop in a non-standard way.</li>
                 </ul>
             </div>
         </div>
